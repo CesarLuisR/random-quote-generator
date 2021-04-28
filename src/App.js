@@ -21,7 +21,7 @@ const App = () => {
   const [author, setAuthor] = useState();
 
   const getRandomQuote = useCallback(() => {
-    axios.get("http://api.quotable.io/random").then((resp) => {
+    axios.get("https://api.quotable.io/random").then((resp) => {
       const data = resp.data;
 
       setAuthor(data.author);
@@ -36,7 +36,7 @@ const App = () => {
 
   const getAuthorQuotes = useCallback(async () => {
     let quotes = [];
-    let url = "http://api.quotable.io/quotes?author=";
+    let url = "https://api.quotable.io/quotes?author=";
     let name = author.split(" ");
 
     name.forEach((element) => {
