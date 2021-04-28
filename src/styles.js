@@ -50,7 +50,7 @@ export const QuoteContainer = styled.div`
   margin-bottom: 100px;
 
   .author-name {
-    width: max-content;
+    width: 100%;
     margin-bottom: 100px;
     font-family: Raleway;
     font-weight: bold;
