@@ -5,8 +5,15 @@ const lineColor = "#F7DF94";
 
 export const AppContainer = styled.div`
   width: 85%;
-  margin: 32px auto;
+  margin: 0 auto;
+  padding-top: 32px;
   max-width: 85%;
+  position: relative;
+  min-height: 100vh;
+`;
+
+export const AppAuthorContainer = styled(AppContainer)`
+  padding-bottom: 40px;
 `;
 
 export const Header = styled.header`
@@ -35,10 +42,62 @@ export const HeaderText = styled.div`
 
 export const QuoteContainer = styled.div`
   width: 50%;
-  height: max-content;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 8px 1fr;
+  grid-template-rows: max-content 1fr;
+  margin-bottom: 100px;
+
+  .author-name {
+    width: max-content;
+    margin-bottom: 100px;
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #333333;
+  }
+
+  .infoContainer {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    margin-left: 56px;
+    width: 100%;
+    padding: 29px 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 100px;
+    text-decoration: none;
+
+    &:hover {
+      background: #333333;
+
+      .authorContainer {
+        transition: 0.3s;
+        color: #f2f2f2;
+      }
+
+      .arrow {
+        display: block;
+      }
+    }
+
+    .arrow {
+      display: none;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      margin-left: 20px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    width: 90%;
+  }
 `;
 
 export const QuoteLine = styled.div`
@@ -56,13 +115,10 @@ export const QuoteText = styled.div`
   font-size: 32px;
   line-height: 120%;
   color: #000000;
-`;
 
-export const InfoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 80px;
-  margin-left: 446px;
+  @media (max-width: 600px) {
+    margin-left: 50px;
+  }
 `;
 
 export const AuthorContainer = styled.div`
@@ -91,5 +147,6 @@ export const Footer = styled.footer`
   line-height: 17px;
   text-align: center;
   color: #828282;
-  margin-top: 80px;
+  position: absolute;
+  bottom: 15px;
 `;
