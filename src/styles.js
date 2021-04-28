@@ -10,6 +10,7 @@ export const AppContainer = styled.div`
   max-width: 85%;
   position: relative;
   min-height: 100vh;
+  padding-bottom: 10px;
 `;
 
 export const AppAuthorContainer = styled(AppContainer)`
@@ -69,7 +70,6 @@ export const QuoteContainer = styled.div`
     padding: 29px 50px;
     cursor: pointer;
     transition: 0.3s;
-    margin-bottom: 100px;
     text-decoration: none;
 
     &:hover {
