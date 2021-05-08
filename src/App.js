@@ -39,9 +39,7 @@ const App = () => {
     let url = "https://api.quotable.io/quotes?author=";
     let name = author.split(" ");
 
-    name.forEach((element) => {
-      url += `%20${element}`;
-    });
+    name.forEach((element) => url += `%20${element}`);
 
     await axios.get(url).then((resp) => {
       let stack = resp.data.results;
